@@ -9,6 +9,7 @@
 <h1>Customers</h1>
 <table border="1">
     <tr>
+        <th>#</th>
         <th>First name</th>
         <th>Last name</th>
         <th>Province</th>
@@ -17,6 +18,7 @@
     </tr>
     <th:block th:each="customer : ${customers}">
         <tr>
+            <td th:text="${customer.id}"></td>
             <td th:text="${customer.firstName}"></td>
             <td th:text="${customer.lastName}"></td>
             <td th:text="${customer.province.name}"></td>

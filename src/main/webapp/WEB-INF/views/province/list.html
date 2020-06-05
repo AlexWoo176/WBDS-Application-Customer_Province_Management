@@ -9,12 +9,14 @@
 <h1>Provinces</h1>
 <table border="1">
     <tr>
+        <th>#</th>
         <th>Name</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
     <th:block th:each="province:${provinces}">
         <tr>
+            <td th:text="${province.id}"></td>
             <td th:text="${province.name}"></td>
             <td><a th:href="@{/edit-province/__${province.id}__}">Edit</a></td>
             <td><a th:href="@{/delete-province/__${province.id}__ }">Delete</a></td>
